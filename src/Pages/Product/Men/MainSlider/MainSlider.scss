@@ -1,0 +1,33 @@
+.MainSlider {
+  .slick-arrow {
+    z-index: 999;
+    width: 17px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  .slick-prev {
+    left: 300px;
+    background: url("https://www.larocheposay.co.kr/images/common/ico_comm_sp.png")
+      no-repeat -169px 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .slick-next {
+    right: 50px;
+    background: url("https://www.larocheposay.co.kr/images/common/ico_comm_sp.png")
+      no-repeat -191px 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-dots {
+    bottom: 25px;
+  }
+}

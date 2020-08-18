@@ -1,0 +1,158 @@
+@import "../../../Styles/common.scss";
+
+.Nav {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999;
+  background-color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .couponBox {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $blackColor;
+    padding: 0 60px;
+
+    .couponText {
+      font-size: 14px;
+      color: $whiteColor;
+      cursor: pointer;
+
+      .redColor {
+        color: red;
+      }
+    }
+
+    .couponDownContainer {
+      padding: 7.5px 15px;
+      font-size: 13px;
+      text-align: center;
+      color: $whiteColor;
+      background-color: $orangeColor;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .menuColumnContainer {
+    margin: 30px 50px;
+
+    .logoRowContainer {
+      display: flex;
+      justify-content: space-between;
+
+      .imgContainer {
+        width: 120px;
+        height: 30px;
+        cursor: pointer;
+
+        .logoImg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .fas {
+        position: relative;
+        cursor: pointer;
+
+        .menuIcon {
+          margin: 0 15px 0 5px;
+          font-size: 12px;
+        }
+
+        .shoppingNumber {
+          width: 15px;
+          top: -10px;
+          left: 8%;
+          position: absolute;
+          font-size: 13px;
+          text-align: center;
+          color: $whiteColor;
+          background-color: $orangeColor;
+          padding: 2px;
+          border-radius: 13px;
+        }
+      }
+    }
+
+    .navRowContainer {
+      height: 50%;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .menuContainer {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 45px;
+
+        .title {
+          margin-right: 30px;
+          cursor: pointer;
+
+          &:hover {
+            border-bottom: 5px solid $blackColor;
+          }
+
+          .dot {
+            width: 8px;
+            height: 8px;
+            margin-left: 5px;
+            position: absolute;
+            border-radius: 50%;
+            background: #ff4800;
+          }
+        }
+
+        .fas {
+          cursor: pointer;
+        }
+      }
+
+      .CategoryColumnContainer {
+        display: flex;
+
+        .categoryCollection {
+          font-weight: bold;
+          font-size: 18px;
+
+          .category {
+            margin-right: 15px;
+            cursor: pointer;
+
+            &:hover {
+              border-bottom: 4px solid $blackColor;
+            }
+          }
+        }
+
+        .border {
+          margin: 0 10px;
+          border-right: 0.5px solid $blackColor;
+        }
+
+        .navSubmenu {
+          font-size: 16px;
+          font-style: oblique;
+          cursor: pointer;
+
+          .submenu {
+            margin: 0 10px;
+
+            &:hover {
+              border-bottom: 4px solid $blackColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

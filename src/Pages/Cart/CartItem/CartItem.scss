@@ -1,0 +1,175 @@
+@import "../../../Styles/common.scss";
+
+.hide {
+  display: none;
+}
+
+.CartItem {
+  @include center;
+  height: 171px;
+  border-top: 1px solid #d4d4d4;
+
+  .td1 {
+    @include center;
+    width: 64px;
+
+    input {
+      cursor: pointer;
+    }
+  }
+
+  .td2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 811px;
+    height: 100%;
+    text-align: left;
+    border-right: 1px solid #d4d4d4;
+
+    .image {
+      img {
+        display: block;
+        float: left;
+        width: 110px;
+        height: 110px;
+        padding: 3px 25px 0 0;
+      }
+    }
+
+    .name {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      text-decoration: underline;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .info {
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .originalPrice {
+      margin-top: 6px;
+    }
+
+    .productPrice {
+      margin-top: 6px;
+      color: #ff4800;
+      font-size: 13px;
+    }
+
+    .delBtn {
+      display: block;
+      overflow: hidden;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 24px;
+      height: 24px;
+      background: (url(//img.29cm.co.kr/next29cm/order/icon-remove.png) no-repeat 0 0);
+      background-size: 24px 24px;
+      line-height: 100em;
+      outline: none;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+
+  .td3 {
+    @include center;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #d4d4d4;
+
+    .inputQuantity {
+      display: flex;
+
+      .btn {
+        @include center;
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        border: 1px solid #d4d4d4;
+        background: #fff;
+        color: #a0a0a0;
+        vertical-align: top;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .quantity {
+        @include center;
+        width: 33px;
+        height: 34px;
+        border: 1px solid #d4d4d4;
+        border-width: 1px 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        text-align: center;
+        outline: none;
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+
+  .td4 {
+    @include center;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #d4d4d4;
+
+    .price {
+      @include center;
+
+      span {
+        font-size: 22px;
+        word-break: break-all;
+        font-weight: 600;
+      }
+    }
+
+    button {
+      width: 100px;
+      height: 38px;
+      margin-top: 17px;
+      border: 1px solid #000;
+      background: #000;
+      text-transform: uppercase;
+      font-size: 14px;
+
+      line-height: 38px;
+      font-weight: 700;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .td5 {
+    @include center;
+    width: 225px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}

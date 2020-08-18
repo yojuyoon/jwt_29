@@ -1,0 +1,21 @@
+@import "../../Styles/common.scss";
+@keyframes bubbleMotion {
+  0% {
+    left: 77%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.SpecialOrder {
+  width: 100%;
+  margin-top: 300px;
+
+  .itemContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

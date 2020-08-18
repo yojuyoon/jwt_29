@@ -1,0 +1,176 @@
+@mixin toGoBox {
+  .btnContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 19px;
+
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 145px;
+      height: 12px;
+      padding: 15px;
+      color: #b0b0b0;
+      border: 1px solid lightgray;
+
+      .arrow {
+        width: 33px;
+        height: 7px;
+        background: url("https://img.29cm.co.kr/next29cm/ico_top_feed.png") 0 0;
+        background-size: 33px 7px;
+      }
+    }
+  }
+}
+
+.categoryWrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 58px;
+  padding-bottom: 80px;
+
+  .categoryTop {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      width: 450px;
+
+      .FeedLeft {
+        float: left;
+        padding-right: 40px;
+        margin-top: 180px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          margin-top: 34px;
+        }
+
+        .line {
+          width: 200px;
+          margin-left: -20px;
+          border-top: 3px solid black;
+        }
+
+        .contentBox {
+          .title {
+            margin-top: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 40px;
+          }
+
+          .content {
+            margin-top: 10px;
+            font-size: 15px;
+            text-align: left;
+            line-height: 1.7;
+          }
+        }
+
+        @include toGoBox();
+
+        .btnContainer {
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .right {
+      width: 850px;
+
+      .right-top {
+        cursor: pointer;
+
+        .FeedRightTop {
+          padding-left: 40px;
+
+          img {
+            width: 100%;
+            margin-top: 34px;
+          }
+
+          .line {
+            width: 200px;
+            float: right;
+            margin-right: -20px;
+            border-top: 3px solid black;
+          }
+
+          .contentBox {
+            .title {
+              margin-top: 15px;
+              font-size: 30px;
+              font-weight: bold;
+              line-height: 40px;
+              text-align: right;
+            }
+
+            .content {
+              margin-top: 10px;
+              font-size: 15px;
+              text-align: right;
+              line-height: 1.7;
+            }
+
+            @include toGoBox();
+          }
+        }
+      }
+
+      .right-bottom {
+        cursor: pointer;
+
+        .FeedRightBottom {
+          margin-top: 120px;
+
+          .container {
+            display: flex;
+
+            img {
+              width: 100%;
+              margin-top: 34px;
+            }
+
+            .line {
+              width: 200px;
+              margin-left: -20px;
+              border-top: 3px solid black;
+            }
+
+            .contentBox {
+              display: flex;
+              align-items: flex-end;
+              margin-left: 40px;
+              padding-right: 50px;
+
+              .title {
+                margin-top: 15px;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: 40px;
+              }
+
+              .content {
+                margin-top: 10px;
+                font-size: 15px;
+                line-height: 1.7;
+              }
+            }
+
+            @include toGoBox();
+
+            .btnContainer {
+              display: flex;
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.ProductList {
+  margin: 0 auto;
+  margin-top: 320px;
+  padding: 0 50px;
+  display: flex;
+
+  .categoryWrap {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .left {
+    width: 280px;
+    padding-right: 80px;
+  }
+
+  .right {
+    width: 80%;
+
+    .categoryTab {
+      display: flex;
+      height: 46px;
+      margin-bottom: 30px;
+      border: solid 1px #d4d4d4;
+    }
+
+    .productSection {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -20px;
+    }
+  }
+}

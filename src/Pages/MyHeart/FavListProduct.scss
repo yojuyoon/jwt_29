@@ -1,0 +1,128 @@
+@import "../../Styles/common.scss";
+
+.FavListProduct {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .itemContainer {
+    width: 350px;
+    list-style: none;
+
+    .imgBox {
+      img {
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .info {
+      margin-top: 15px;
+
+      .brand {
+        margin-bottom: 7px;
+        font-size: 13px;
+        text-decoration: underline;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .name {
+        margin-bottom: 14px;
+        padding-right: 10%;
+        line-height: 16px;
+        font-size: 14px;
+        color: #5d5d5d;
+        word-break: break-all;
+      }
+
+      .price {
+        font-size: 14px;
+        line-height: 16px;
+        vertical-align: top;
+
+        .sellPrice {
+          font-weight: 400;
+          color: #d4d4d4;
+          font-size: 12px;
+        }
+
+        .nonDiscounted {
+          font-weight: 600;
+          color: #303033;
+          font-size: 14px;
+        }
+
+        .discountedPrice {
+          font-weight: 600;
+          color: #ff4800;
+          font-size: 14px;
+          line-height: 16px;
+          cursor: pointer;
+        }
+
+        .hide {
+          display: none;
+        }
+      }
+    }
+
+    .freeShipping {
+      border: 1px solid #e4e4e4;
+      display: inline-block;
+      height: 18px;
+      margin-top: 6px;
+      padding: 0 8px;
+      font-size: 10px;
+      color: #5d5d5d;
+      line-height: 18px;
+    }
+
+    .heartArea {
+      display: inline-block;
+      margin-top: 13px;
+
+      .count {
+        margin-left: 8px;
+        margin-top: 4px;
+        font-size: 12px;
+      }
+
+      .heart {
+        display: flex;
+        height: 18px;
+        margin-right: 14px;
+        line-height: 18px;
+        vertical-align: top;
+        margin-right: 3px;
+        cursor: pointer;
+
+        .heartImageBox {
+          svg {
+            width: 15px;
+          }
+        }
+      }
+
+      .review {
+        display: flex;
+        height: 18px;
+        margin-right: 14px;
+        line-height: 18px;
+        vertical-align: top;
+
+        .image {
+          margin-right: 5px;
+
+          img {
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

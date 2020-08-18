@@ -1,0 +1,84 @@
+@import "../../Styles/common.scss";
+@import "../../Components/ActiveLikeBtn/ActiveLikeBtn.scss";
+
+.feedContainer {
+  width: 100%;
+
+  .feedContent {
+    width: 350px;
+    height: 820px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .container {
+      cursor: pointer;
+    }
+
+    .feedText {
+      margin: 10px 0;
+
+      .feedProfile {
+        display: inline-block;
+        height: 60px;
+        margin-bottom: 10px;
+
+        .profile {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .feedProfileText {
+          @include rowCenter;
+          flex-direction: column;
+
+          .brandName {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          .officialCheck {
+            margin-top: 5px;
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .feedComment {
+        height: 40px;
+        font-size: 18px;
+        line-height: 23px;
+        overflow: hidden;
+      }
+
+      .feedTag {
+        width: 320px;
+        margin: 12px 0;
+        font-size: 18px;
+        line-height: 23px;
+        word-break: break-all;
+        font-weight: bold;
+
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .container {
+      width: 335px;
+      height: 565px;
+      overflow: hidden;
+
+      .feedImg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

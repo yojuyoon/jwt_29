@@ -1,0 +1,24 @@
+.likeIcon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #5d5d5d;
+  cursor: pointer;
+
+  .clickedIconActive {
+    display: block;
+  }
+
+  .likeNumber {
+    margin-left: 5px;
+  }
+
+  .likeIconDisplayNone {
+    display: none;
+  }
+
+  .clickedIcon {
+    display: none;
+    position: absolute;
+  }
+}

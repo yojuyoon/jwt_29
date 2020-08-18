@@ -1,0 +1,74 @@
+@import "../../Styles/common.scss";
+
+.SpecialContent {
+  height: 684px;
+  margin: 10px;
+  cursor: pointer;
+
+  .imgContainer {
+    width: 44vw;
+    // height: 450px;
+
+    .orderImg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .itemTitle {
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .itemSubtitle {
+    height: 48px;
+    margin-top: 6px;
+
+    .subcontent {
+      color: blue;
+      font-weight: bold;
+    }
+  }
+
+  .dDayBubble {
+    height: 60px;
+    left: 0;
+    position: relative;
+
+    .bubble {
+      width: 170px;
+      position: absolute;
+      font-weight: bold;
+      color: $whiteColor;
+      background-color: $orangeColor;
+      padding: 6px 12px 6px 6px;
+      border-radius: 0.2rem;
+      text-align: center;
+      animation: bubbleMotion 1s forwards;
+
+      &::before {
+        content: "";
+        border-bottom: 30px solid transparent;
+        border-left: 10px solid $orangeColor;
+      }
+    }
+  }
+
+  .dDayBorder {
+    height: 2px;
+    background-color: #e4e4e4;
+
+    .progress {
+      height: 100%;
+      background-color: red;
+    }
+  }
+
+  .itemDate {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,294 @@
+@import "../../Styles/common.scss";
+
+.DetailItem {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 1200px;
+  margin: 40px auto;
+
+  .titleContainer {
+    display: flex;
+    margin-bottom: 20px;
+
+    .imgContainer {
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .brandLink {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+      justify-content: space-around;
+
+      button {
+        width: 100px;
+        margin-top: 6px;
+        padding: 5px 8px 3px;
+        border: 1px solid #e5e5e5;
+        border-radius: 2px;
+        font-size: 11px;
+        text-align: center;
+        color: #000;
+        background-color: $whiteColor;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .detailItemContainer {
+    display: flex;
+
+    .imgContainer {
+      width: 564px;
+      height: 564px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .detailOrder {
+      width: 576px;
+      margin-left: 48px;
+      border-top: 2px solid black;
+
+      .orderRowContainer {
+        height: 70px;
+        display: flex;
+        margin-bottom: 20px;
+
+        .orderTitle {
+          width: 85%;
+          margin: auto 0;
+          font-size: 20px;
+          font-weight: bold;
+          border-right: 0.5px solid #e5e5e5;
+        }
+
+        .heartCenterContainer {
+          width: 15%;
+          height: 70px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: auto 0;
+          border-left: 1px solid #e5e5e5;
+          cursor: pointer;
+
+          p {
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .costPrice {
+        text-decoration-line: line-through;
+        color: #a0a0a0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .priceContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .price {
+          font-weight: bold;
+          font-size: 22px;
+          color: $orangeColor;
+        }
+
+        .coupon {
+          height: 32px;
+          width: 120px;
+          border-radius: 4px;
+          background: #f4f4f4;
+          font-size: 12px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      .titleBottomBorder {
+        height: 1px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .saleContainer {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        .tr {
+          margin-right: 20px;
+        }
+
+        .td {
+          color: $orangeColor;
+        }
+      }
+
+      .benefitContainer {
+        display: flex;
+        font-size: 14px;
+        margin-bottom: 50px;
+
+        .tr {
+          margin-right: 20px;
+        }
+
+        p {
+          margin-bottom: 10px;
+        }
+
+        .openCard {
+          font-size: 12px;
+          text-decoration-line: underline;
+        }
+      }
+
+      .purcharseContainer {
+        height: 50px;
+        margin-bottom: 30px;
+
+        .purchaseBtn {
+          width: 50%;
+          height: 100%;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+        }
+
+        .bag {
+          background-color: $whiteColor;
+          border: 1px solid #d4d4d4;
+        }
+
+        .buy {
+          color: $whiteColor;
+          background-color: $blackColor;
+
+          &:hover {
+            background-color: $orangeColor;
+          }
+        }
+      }
+
+      .priceResultContainer {
+        margin: 10px 0;
+
+        .resultProduct {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 28px;
+          border-top: 1px solid #e4e4e4;
+          padding: 30px 0;
+
+          .productName {
+            width: 340px;
+          }
+
+          .rowContainer {
+            display: flex;
+            align-items: center;
+
+            .caculatar {
+              height: 28px;
+              margin-right: 50px;
+
+              .numberBtn {
+                width: 28px;
+                height: 28px;
+                border: 1px solid #cdcdcd;
+                border-radius: 0;
+                background: #fff;
+                font-size: 15px;
+                color: #5d5d5d;
+                outline: none;
+                cursor: pointer;
+                vertical-align: top;
+              }
+
+              .productNumber {
+                width: 35px;
+                height: 28px;
+                border: 1px solid #cbcbcb;
+                border-width: 1px 0;
+                font-size: 13px;
+                color: #666;
+                text-align: center;
+              }
+            }
+
+            .price {
+              margin-right: 15px;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .border {
+          margin: 5px 0 10px;
+          border: 1px solid black;
+        }
+
+        .totalPrice {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin-bottom: 20px;
+
+          .text {
+            margin-right: 24px;
+          }
+
+          .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: $orangeColor;
+          }
+        }
+      }
+
+      .firstPurchaseContainer {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        border: 1px solid #e4e4e4;
+        font-weight: 700;
+        font-size: 14px;
+        background-color: #f8f8f8;
+
+        span {
+          width: 85%;
+
+          .redFont {
+            color: red;
+          }
+        }
+
+        img {
+          width: 43px;
+          height: 7px;
+        }
+      }
+    }
+  }
+}

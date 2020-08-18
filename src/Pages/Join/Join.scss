@@ -1,0 +1,48 @@
+@import "../../Styles/common.scss";
+
+$border: 1px solid #d4d4d4;
+
+.Join {
+  width: 400px;
+  height: 738px;
+  margin: 0 auto;
+  margin-top: 295px;
+
+  .loginTitle {
+    height: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .loginBorder {
+    border: 2.5px solid $blackColor;
+    margin-bottom: 18px;
+  }
+
+  .bannerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 178px;
+    margin-bottom: 20px;
+
+    .banner {
+      padding: auto 0;
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  .emailJoin {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: $blackColor;
+    color: $whiteColor;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,236 @@
+@import "../../Styles/common.scss";
+
+.Cart {
+  width: 1350px;
+  margin: 0 auto;
+  margin-top: 325px;
+  padding: 0 50px 200px;
+
+  .orderFlow {
+    margin: 70px 0 78px;
+    display: flex;
+    justify-content: center;
+
+    .greyed {
+      color: #d4d4d4;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    ol {
+      display: flex;
+    }
+
+    span {
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  .cartList {
+    margin: 70px 0 0;
+    border-top: 4px solid #000;
+
+    .category {
+      @include center;
+      height: 74px;
+
+      .th1 {
+        @include center;
+        width: 64px;
+      }
+
+      .th2 {
+        @include center;
+        width: 811px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .th3 {
+        @include center;
+        width: 200px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .th4 {
+        @include center;
+        width: 200px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .th5 {
+        @include center;
+        width: 225px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.cartControl {
+  overflow: hidden;
+  padding-top: 30px;
+  border-top: 1px solid #000;
+
+  button {
+    float: left;
+    width: 130px;
+    height: 42px;
+    margin-right: 10px;
+    border: 1px solid #a0a0a0;
+    color: #303033;
+    font-size: 15px;
+    line-height: 42px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+  }
+
+  span {
+    float: right;
+    font-size: 15px;
+    color: #000;
+    line-height: 40px;
+  }
+}
+
+.priceInfoWrap {
+  margin: 117px auto 137px;
+  border-top: 4px solid #000;
+  border-bottom: 1px solid #000;
+
+  .category {
+    @include center;
+    height: 74px;
+
+    .th1 {
+      @include center;
+      width: 540px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .th2 {
+      @include center;
+      width: 420px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .th3 {
+      @include center;
+      width: 540px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+
+  .content {
+    @include center;
+    height: 149px;
+    border-top: 1px solid #d4d4d4;
+
+    .td1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 540px;
+
+      .price {
+        font-size: 32px;
+        vertical-align: -4px;
+        font-weight: 600;
+      }
+
+      .quantity {
+        margin-top: 10px;
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+
+    .td2 {
+      @include center;
+      width: 420px;
+
+      .price {
+        font-size: 32px;
+        vertical-align: -4px;
+        font-weight: 600;
+      }
+    }
+
+    .td3 {
+      @include center;
+      width: 540px;
+
+      .price {
+        font-size: 32px;
+        vertical-align: -4px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.btnOrderWrap {
+  margin-top: 30px;
+  text-align: center;
+
+  button {
+    width: 400px;
+    height: 72px;
+    border-radius: 0;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 72px;
+    vertical-align: top;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .btnShopping {
+    border: 1px solid #a0a0a0;
+    color: #303033;
+    background-color: white;
+
+    a {
+      text-decoration: none;
+      color: #303033;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .btnCheckout {
+    margin-left: 10px;
+    background: #000;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,34 @@
+$blackColor: rgb(0, 0, 0);
+$orangeColor: rgb(255, 72, 0);
+$grayColor: rgb(44, 44, 48);
+$whiteColor: rgb(255, 255, 255);
+$clearColor: #00ff0000;
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin columnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin btnCustom {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+  outline: none;
+}

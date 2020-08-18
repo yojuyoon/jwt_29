@@ -1,0 +1,27 @@
+.CategoryItem {
+  height: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: solid 1px #d4d4d4;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #bfbfbf;
+  }
+}
+
+.clicked {
+  font-weight: 700;
+
+  a {
+    color: #000000;
+  }
+}

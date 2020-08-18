@@ -1,0 +1,26 @@
+.Men {
+  margin-top: 313px;
+
+  .MainWrap {
+    .categoryNav {
+      width: 250px;
+      height: 571px;
+      position: absolute;
+      left: 25px;
+      margin: 25px 0 0;
+      padding: 25px 25px 15px;
+      z-index: 20;
+      background-color: white;
+    }
+
+    .mainSwiper {
+      background: no-repeat cover 50%;
+
+      img {
+        width: 100%;
+        height: 680px;
+        background-position: 50%;
+      }
+    }
+  }
+}

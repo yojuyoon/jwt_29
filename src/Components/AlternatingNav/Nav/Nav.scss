@@ -1,0 +1,141 @@
+@import "../../../Styles/common.scss";
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.NavActive {
+  width: 100%;
+  height: 92px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: $whiteColor;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #d4d4d4;
+
+  .navContainer {
+    display: flex;
+    padding: 0 25px 0 50px;
+
+    .logoContainer {
+      max-width: 56px;
+      min-width: 56px;
+      height: 56px;
+      cursor: pointer;
+
+      .logoImg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .navMenuContainer {
+      width: 100%;
+      padding: 0 20px;
+
+      .navRowContainer {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .menuTitle {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 900;
+          font-size: 26px;
+
+          .title {
+            margin: 5px 10px;
+            cursor: pointer;
+
+            &:hover {
+              border-bottom: 4px solid $blackColor;
+            }
+
+            .dot {
+              width: 5px;
+              height: 5px;
+              margin-left: 5px;
+              position: absolute;
+              border-radius: 50%;
+              background: #ff4800;
+            }
+          }
+        }
+
+        .navMenuIcon {
+          position: relative;
+          font-size: 20px;
+
+          .fas {
+            padding: 0 10px 0;
+            cursor: pointer;
+          }
+
+          .shoppingNumber {
+            width: 15px;
+            top: -10px;
+            left: 50%;
+            position: absolute;
+            font-size: 13px;
+            color: $whiteColor;
+            background-color: $orangeColor;
+            padding: 2px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 13px;
+            box-sizing: border-box;
+          }
+        }
+
+        .categoryColumnContainer {
+          display: flex;
+
+          .categoryColletion {
+            font-size: 14px;
+            font-weight: bold;
+
+            .category {
+              margin: 0 10px;
+              cursor: pointer;
+
+              &:hover {
+                border-bottom: 4px solid $blackColor;
+              }
+            }
+          }
+
+          .border {
+            margin: 0 10px;
+            border-right: 0.5px solid #d4d4d4;
+          }
+
+          .submenuCollection {
+            font-size: 13px;
+            font-style: oblique;
+            font-weight: 300;
+
+            .submenu {
+              margin: 0 10px;
+              cursor: pointer;
+
+              &:hover {
+                border-bottom: 4px solid $blackColor;
+              }
+            }
+          }
+        }
+
+        .fa-search {
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
