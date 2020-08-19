@@ -1,6 +1,6 @@
 import React from "react";
+import { API_URL } from "../../config";
 import "./JoinEmail.scss";
-import API_URL from "../../config";
 
 class JoinEmail extends React.Component {
   state = {

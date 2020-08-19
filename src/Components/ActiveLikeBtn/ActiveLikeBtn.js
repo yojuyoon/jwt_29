@@ -1,5 +1,5 @@
 import React from "react";
-import API_URL from "../../config";
+import { API_URL } from "../../config";
 import ActiveIcon from "./svg/ActiveIcon";
 import UnActiveIcon from "./svg/UnActiveIcon";
 import "./ActiveLikeBtn.scss";

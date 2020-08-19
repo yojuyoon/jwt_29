@@ -54,6 +54,10 @@
         font-size: 14px;
         line-height: 16px;
         cursor: pointer;
+
+        .discountRate {
+          margin-right: 5px;
+        }
       }
 
       .hide {
@@ -86,18 +90,16 @@
     }
 
     .heart {
-      //   display: inline-block;
-      //   width: 18px;
       display: flex;
       height: 18px;
       margin-right: 14px;
       line-height: 18px;
-      vertical-align: top;
       margin-right: 3px;
       cursor: pointer;
 
       .heartImageBox {
         svg {
+          margin-top: 4px;
           width: 15px;
         }
       }

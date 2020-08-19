@@ -1,7 +1,7 @@
 import React from "react";
 import SnsLogin from "./SnsLogin/SnsLogin";
 import { Link } from "react-router-dom";
-import API_URL from "../../config";
+import { API_URL } from "../../config";
 import "./Login.scss";
 
 class Login extends React.Component {

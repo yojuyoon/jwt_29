@@ -1,10 +1,10 @@
 import React from "react";
-import "./ProductList.scss";
 import LeftNav from "./LeftNav/LeftNav";
 import ProductItem from "./ProductItem/ProductItem";
 import CategoryList from "./CategoryList/CategoryList";
 import FilterNav from "./FilterNav/FilterNav";
-import API_URL from "../../Components/config";
+import { API_URL } from "../../config";
+import "./ProductList.scss";
 
 class ProductList extends React.Component {
   constructor() {
@@ -18,7 +18,7 @@ class ProductList extends React.Component {
 
   componentDidMount() {
     fetch(
-      `${API_URL}/product?category=${this.props.match.params.category}&subcategory=${this.props.match.params.subcategory}`,
+      `${API_URL}/data/product.json`,
       localStorage.getItem("token") && {
         headers: {
           Authorization: localStorage.getItem("token"),

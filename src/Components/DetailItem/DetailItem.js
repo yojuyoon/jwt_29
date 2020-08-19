@@ -1,8 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import API_URL from "../../config";
+import { API_URL } from "../../config";
 import ActiveIcon from "../ActiveLikeBtn/svg/ActiveIcon";
-import UnActiveIcon from "../ActiveLikeBtn/svg/UnActiveIcon";
+import UnActiveIcon from "../ActiveLikeBtn/svg/ActiveIcon";
 import "./DetailItem.scss";
 
 class DetailItem extends React.Component {

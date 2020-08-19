@@ -7,6 +7,8 @@
       "discount_rate": 0,
       "discount_price": "0",
       "brand": "난 할인안해!",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/07/07/2ed6b52ad7f844d98cd6e210394d76a6_20200707105128.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/07/03/b9109f97fc454245a809cddb2d5e726f_20200703190620.jpg?width=700",
@@ -21,6 +23,8 @@
       "discount_rate": 47,
       "discount_price": "46000.00",
       "brand": "잉시",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/07/07/2ed6b52ad7f844d98cd6e210394d76a6_20200707105128.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/07/03/b9109f97fc454245a809cddb2d5e726f_20200703190620.jpg?width=700",
@@ -35,6 +39,8 @@
       "discount_rate": 17,
       "discount_price": "27550.00",
       "brand": "더니트컴퍼니",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/06/19/c68fbb621cbd4bf89ec3ec9de81a4a65_20200619111132.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/06/05/e072ac5d827e4eefac934c36bb0b4423_20200605172303.jpg?width=700",
@@ -49,6 +55,8 @@
       "discount_rate": 10,
       "discount_price": "34200.00",
       "brand": "빅웨이브컬렉티브",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/05/22/5e39351e8dcc4bf980e6ed92c2fa1ee8_20200522153231.jpg?width=700"
       ]
@@ -60,6 +68,8 @@
       "discount_rate": 15,
       "discount_price": "47600.00",
       "brand": "블랭크 룸",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/07/17/594ad6e2e08e4ded830e1746d74a0f21_20200717134525.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/07/17/66a371a6536d4a10bb5c350fab3deee6_20200717141001.jpg?width=700",
@@ -74,6 +84,8 @@
       "discount_rate": 40,
       "discount_price": "54000.00",
       "brand": "잉시",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/05/22/38d69b23b1d94231a4e66208eb1c41f3_20200522141545.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/05/15/a4cffadbe8be47a69f3a3c2986a729a8_20200515170739.jpg?width=700",
@@ -88,6 +100,8 @@
       "discount_rate": 35,
       "discount_price": "21280.00",
       "brand": "브릭",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/03/25/2b843994d460421c8a22b83060fb8281_20200325143207.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/03/25/bff1150d4a23467986f55278f70cf6f4_20200325143215.jpg?width=700"
@@ -100,6 +114,8 @@
       "discount_rate": 15,
       "discount_price": "33150.00",
       "brand": "블랭크 룸",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/04/24/77d0ae513a7c4ed49aee356a9838cad9_20200424111052.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/04/24/d96742c007ed495b97959d0f79281750_20200424111055.jpg?width=700",
@@ -114,6 +130,8 @@
       "discount_rate": 30,
       "discount_price": "27075.00",
       "brand": "곤니치와봉쥬르",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/04/10/0d33c232d16f4f9fb2b0594c5bd3eb09_20200410111229.jpg?width=700"
       ]
@@ -125,6 +143,8 @@
       "discount_rate": 31,
       "discount_price": "44000.00",
       "brand": "리센느",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/04/07/85c0253217f54c32a4e3744a52e5b70e_20200407181207.jpg?width=700"
       ]
@@ -136,6 +156,8 @@
       "discount_rate": 50,
       "discount_price": "19800.00",
       "brand": "일오공칠",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/04/04/7a4f0b9186b841bd8497c807d953fb92_20190404162116.jpg?width=700"
       ]
@@ -147,6 +169,8 @@
       "discount_rate": 35,
       "discount_price": "32585.00",
       "brand": "브릭",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/03/25/4657ec9471804807b96a2e32d3c53bee_20200325143437.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/03/25/20e93e401cc34ed29d483432d94d48d1_20200325143442.jpg?width=700"
@@ -159,6 +183,8 @@
       "discount_rate": 35,
       "discount_price": "29925.00",
       "brand": "브릭",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2018/05/08/e84d1225ffe24f86bffd611d73b9d73d_20180508121032.jpg?width=700"
       ]
@@ -170,6 +196,8 @@
       "discount_rate": 50,
       "discount_price": "39000.00",
       "brand": "레투",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/06/20/9d0e8e59ad334b30ac534d8b7d7e478f_20200620141942.jpg?width=700"
       ]
@@ -181,6 +209,8 @@
       "discount_rate": 5,
       "discount_price": "79800.00",
       "brand": "조셉트",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/06/26/a8253873efed4c0eb8f8b19fba7e6d9a_20190626145755.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2019/06/26/ca7b148745d048cf8538902e5ac60098_20190626145757.jpg?width=700"
@@ -193,6 +223,8 @@
       "discount_rate": 18,
       "discount_price": "97580.00",
       "brand": "캐치볼",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/03/31/6cdf58ea897c4757b20645530b31808f_20200331182104.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/03/31/2cd08a07079c43d2962c68c9683acf42_20200331182110.jpg?width=700",
@@ -207,6 +239,8 @@
       "discount_rate": 0,
       "discount_price": "0.00",
       "brand": "하 아카이브",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/12/23/ae94ce4b345b4631934742b5dca6c6db_20191223140443.jpg?width=700"
       ]
@@ -218,6 +252,8 @@
       "discount_rate": 20,
       "discount_price": "95200.00",
       "brand": "스위치",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/01/21/d80b84539efe4e2dbb77a6d5aede1c8d_20200121134803.jpg?width=700"
       ]
@@ -229,6 +265,8 @@
       "discount_rate": 40,
       "discount_price": "58800.00",
       "brand": "아영상사",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/03/25/6f5426163d2c48e3a2ea8cd6fe370482_20200325180725.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/03/25/97d217acee734878816cf356dfbaee70_20200325154015.jpg?width=700"
@@ -241,6 +279,8 @@
       "discount_rate": 10,
       "discount_price": "34200.00",
       "brand": "빅웨이브컬렉티브",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/05/22/1760d38e60584816b499e4a7c19e14e2_20200522155254.jpg?width=700"
       ]
@@ -252,6 +292,8 @@
       "discount_rate": 15,
       "discount_price": "75650.00",
       "brand": "캐치볼",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/06/17/20ca1d8235d144778abff85ecf286d28_20200617170219.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/06/17/b1d1c386a8a049f8b837fb4f895efbef_20200617170227.jpg?width=700",
@@ -266,6 +308,8 @@
       "discount_rate": 15,
       "discount_price": "40185.00",
       "brand": "반원",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/03/14/daf5caf600ec45a68f177b9b9af6532a_20190314154738.jpg?width=700"
       ]
@@ -277,6 +321,8 @@
       "discount_rate": 10,
       "discount_price": "34200.00",
       "brand": "빅웨이브컬렉티브",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/05/27/3fae9a3658534721abca1652b5fb8b75_20200527150436.jpg?width=700"
       ]
@@ -288,6 +334,8 @@
       "discount_rate": 34,
       "discount_price": "48180.00",
       "brand": "두런",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/10/04/bbcdf1d99f654f59a58f995165926cbf_20191004130152.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2019/04/07/1f11d2acfc96414aabbef45bc697800b_20190407131049.JPG?width=700",
@@ -301,6 +349,8 @@
       "discount_rate": 15,
       "discount_price": "75650.00",
       "brand": "캐치볼",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/06/17/03fd7f7301024ae18f662bf2382796aa_20200617163350.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/06/17/fb6c876947544e5ba78cdbb6e606ea15_20200617163433.jpg?width=700",
@@ -315,6 +365,8 @@
       "discount_rate": 5,
       "discount_price": "32300.00",
       "brand": "포쉬프로젝트",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/05/28/e3cf4a189dec48c7bd06ce9d330c22d9_20190528173542.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2019/05/28/1aa62e45d9f24e27a6e97124f9782e45_20190528173621.jpg?width=700"
@@ -327,6 +379,8 @@
       "discount_rate": 10,
       "discount_price": "70200.00",
       "brand": "발루트",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/06/18/20f3f8ba00e04b6aa04435441d8460af_20200618135710.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/06/12/6cc0ed22268b4d389f6ac0c4d56cda99_20200612184749.jpg?width=700",
@@ -340,6 +394,8 @@
       "discount_rate": 0,
       "discount_price": "0.00",
       "brand": "와이잭",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/05/13/1288bafd01b04733bb3c7925913d0423_20200513182036.jpg?width=700"
       ]
@@ -351,6 +407,8 @@
       "discount_rate": 15,
       "discount_price": "40185.00",
       "brand": "반원",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/05/07/ed8fea5665604fe7ab50e3ce212e63fd_20200507143258.jpg?width=700"
       ]
@@ -362,6 +420,8 @@
       "discount_rate": 40,
       "discount_price": "55200.00",
       "brand": "아영상사",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/09/24/a5a648bb69be44c9b508d402bccd18f6_20190924181205.jpg?width=700"
       ]
@@ -373,6 +433,8 @@
       "discount_rate": 20,
       "discount_price": "30400.00",
       "brand": "아웃스탠딩앤코",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/06/22/ce51e9929db94dd59e2172b73c893ba6_20200622124037.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/06/22/b777d6e6209b40c18009a6f52c0a0d8f_20200622124040.jpg?width=700"
@@ -385,6 +447,8 @@
       "discount_rate": 25,
       "discount_price": "35720.00",
       "brand": "반원",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/05/07/c68bbb0cd92845c08db6c10c5d54fd69_20200507153140.jpg?width=700"
       ]
@@ -396,6 +460,8 @@
       "discount_rate": 35,
       "discount_price": "29925.00",
       "brand": "브릭",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2018/05/08/11fb2321a06e42678f5841478e2b43c8_20180508120934.jpg?width=700"
       ]
@@ -407,6 +473,8 @@
       "discount_rate": 35,
       "discount_price": "27300.00",
       "brand": "빅웨이브컬렉티브",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/06/21/eeecacc53b054f668b8bbd9661322e3a_20190621095032.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2019/06/21/f0b86f5d2863401a8f78d7924496b91c_20190621095044.jpg?width=700"
@@ -419,6 +487,8 @@
       "discount_rate": 40,
       "discount_price": "19200.00",
       "brand": "곤니치와봉쥬르",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/04/10/d51a002232034b2caf4509055e25a32d_20200410144719.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/04/08/1dc8fdf29e8e4826b461f63411fa57a1_20200408151120.jpg?width=700",
@@ -433,6 +503,8 @@
       "discount_rate": 10,
       "discount_price": "70200.00",
       "brand": "발루트",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/03/25/99c6670f8a9042ab9af40db9f055b4e2_20200325204315.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2020/03/04/160380c0082e4ae68d4c5be17f2528ec_20200304190805.jpg?width=700",
@@ -447,6 +519,8 @@
       "discount_rate": 15,
       "discount_price": "40185.00",
       "brand": "반원",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/09/10/5408b8e2bf19481aae154b5ac88767ea_20190910140308.jpg?width=700"
       ]
@@ -458,6 +532,8 @@
       "discount_rate": 30,
       "discount_price": "31500.00",
       "brand": "머브클로딩",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2019/07/09/a3cc5104cd554d5a9399b85aa960878c_20190709190632.jpg?width=700",
         "https://img.29cm.co.kr/next-product/2019/07/09/76586147e14a4d6db38d93e92f37475f_20190709190639.jpg?width=700",
@@ -471,6 +547,8 @@
       "discount_rate": 30,
       "discount_price": "69300.00",
       "brand": "그라미치",
+      "user_like_pressed": true,
+      "like_num": 2,
       "image": [
         "https://img.29cm.co.kr/next-product/2020/04/23/03a3c35c5eff4b95b5b690608a9e3690_20200423151503.jpg?width=700"
       ]
