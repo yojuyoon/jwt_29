@@ -1,0 +1,13 @@
+// ESLint 설정 파일
+{
+  "extends": ["react-app", "plugin:prettier/recommended"],
+  // "plugins": [
+  //   "import",
+  //   "react",
+  //   "react-hooks"
+  // ],
+  "rules": {
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+  },
+  "parser": "babel-eslint"
+}

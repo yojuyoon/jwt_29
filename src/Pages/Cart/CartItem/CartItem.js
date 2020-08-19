@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./CartItem.scss";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { cartsActions } from "../../../store/actions";
 
 const CartItem = ({
-  store,
-  cartData,
+  product,
   itemSelected,
   handleSelectedItem,
-  handleSum,
-  handleMinus,
   delSelectedItem,
 }) => {
   const {
@@ -20,18 +19,16 @@ const CartItem = ({
     discount_rate,
     discount_price,
     quantity,
-  } = cartData;
+  } = product;
 
-  // const { incrementQuantity, decrementQuantity, removeOneFromCart} = useSelector(state => ({ incrementQuantity : state.a, state.b }), [])
+  const dispatch = useDispatch();
 
   const handleTotalPriceItem = () => {
-    const { discount_rate, discount_price, price } = cartData;
-
     if (discount_rate) {
-      return (quantity * +discount_price).toLocaleString();
+      return (quantity * Number(discount_price)).toLocaleString();
     }
 
-    return (quantity * +price).toLocaleString();
+    return (quantity * Number(price)).toLocaleString();
   };
 
   return (
@@ -39,12 +36,13 @@ const CartItem = ({
       <div className="td1">
         <span
           className="check"
-          onClick={() => handleSelectedItem(id, quantity)}
+          onClick={() => handleSelectedItem(id)}
         >
           <input
             type="checkbox"
             checked={itemSelected.includes(id) && "checked"}
-          ></input>
+          >
+          </input>
         </span>
       </div>
       <div className="td2">
@@ -63,11 +61,13 @@ const CartItem = ({
             <Link className="info">{name}</Link>
           </div>
           <div className="originalPrice">
-            <span className="price">{parseInt(price).toLocaleString()}</span>{" "}
+            <span className="price">{parseInt(price).toLocaleString()}</span>
+            {" "}
             <span className="currency">원</span>
           </div>
           <div className={discount_rate ? "productPrice" : "hide"}>
-            <span className="discountRate">[{discount_rate}%]</span>{" "}
+            <span className="discountRate">[{discount_rate}%]</span>
+            {" "}
             <span className="totalPrice">
               {parseInt(discount_price).toLocaleString()}
             </span>
@@ -75,8 +75,9 @@ const CartItem = ({
           </div>
           <button
             className="delBtn"
-            onClick={() => delSelectedItem(id)}
-          ></button>
+            onClick={() => dispatch(cartsActions.removeOneFromCart(id))}
+          >
+          </button>
         </div>
       </div>
       <div className="td3">
@@ -85,12 +86,16 @@ const CartItem = ({
             <button
               className="btn"
               type="button"
-              onClick={() => handleMinus(id)}
+              onClick={() => dispatch(cartsActions.decrementQuantity(id))}
             >
               -
             </button>
             <div className="quantity">{quantity}</div>
-            <button className="btn" type="button" onClick={() => handleSum(id)}>
+            <button
+              className="btn"
+              type="button"
+              onClick={() => dispatch(cartsActions.incrementQuantity(id))}
+            >
               +
             </button>
           </div>
