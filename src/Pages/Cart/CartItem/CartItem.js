@@ -8,7 +8,6 @@ const CartItem = ({
   product,
   itemSelected,
   handleSelectedItem,
-  delSelectedItem,
 }) => {
   const {
     id,
@@ -86,7 +85,8 @@ const CartItem = ({
             <button
               className="btn"
               type="button"
-              onClick={() => dispatch(cartsActions.decrementQuantity(id))}
+              onClick={() =>
+                quantity > 1 && dispatch(cartsActions.decrementQuantity(id))}
             >
               -
             </button>
@@ -94,7 +94,8 @@ const CartItem = ({
             <button
               className="btn"
               type="button"
-              onClick={() => dispatch(cartsActions.incrementQuantity(id))}
+              onClick={() =>
+                quantity < 5 && dispatch(cartsActions.incrementQuantity(id))}
             >
               +
             </button>
