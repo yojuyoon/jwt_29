@@ -43,7 +43,7 @@ const Cart = () => {
 
   const handleMasterSelectBtn = () => {
     setItemSelected(
-      itemSelected.length === carts.length ? [] : carts.map((item) => item.id),
+      itemSelected.length === carts.length ? [] : carts.map((item) => item.id)
     );
   };
 
@@ -51,14 +51,12 @@ const Cart = () => {
     setItemSelected(
       itemSelected.includes(id)
         ? itemSelected.filter((selectedId) => selectedId !== id)
-        : [...itemSelected, id],
+        : [...itemSelected, id]
     );
   };
 
   useEffect(() => {
-    setCheckMasterState(
-      carts.length && itemSelected.length === carts.length,
-    );
+    setCheckMasterState(carts.length && itemSelected.length === carts.length);
   }, [itemSelected, carts]);
 
   const handleCheckOut = () => {
@@ -81,9 +79,7 @@ const Cart = () => {
   };
 
   const handleRemoveSelectedProducts = () => {
-    dispatch(
-      cartsActions.removeSelectedProductsFromCart(itemSelected),
-    );
+    dispatch(cartsActions.removeSelectedProductsFromCart(itemSelected));
     setItemSelected([]);
   };
 
@@ -159,10 +155,7 @@ const Cart = () => {
             })}
           </div>
           <div className="cartControl">
-            <button
-              type="button"
-              onClick={handleRemoveSelectedProducts}
-            >
+            <button type="button" onClick={handleRemoveSelectedProducts}>
               선택상품 삭제
             </button>
             <button type="button">품절상품 삭제</button>
