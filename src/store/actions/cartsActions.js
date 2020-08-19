@@ -1,5 +1,6 @@
 class cartsActionsClass {
   constructor() {
+    this.SET_CARTS = "SET_CARTS";
     this.ADD_TO_CART = "ADD_TO_CART";
     this.OVERRIDE_EXISTING_PRODUCT = "OVERRIDE_EXISTING_PRODUCT";
     this.INCREMENT_QUANTITY = "INCREMENT_QUANTITY";
@@ -9,6 +10,15 @@ class cartsActionsClass {
     this.REMOVE_SELECTED_PRODUCTS_FROM_CART =
       "REMOVE_SELECTED_PRODUCTS_FROM_CART";
   }
+
+  setCarts = (carts) => {
+    return {
+      type: this.SET_CARTS,
+      payload: {
+        carts,
+      },
+    };
+  };
 
   addToCart = (product) => {
     return {

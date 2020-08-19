@@ -1,6 +1,7 @@
 import { cartsActions } from "../actions";
 
 const {
+  SET_CARTS,
   ADD_TO_CART,
   OVERRIDE_EXISTING_PRODUCT,
   INCREMENT_QUANTITY,
@@ -16,6 +17,9 @@ const carts = (state = INITIAL_CARTS_STATE, action) => {
   const { type, payload } = action;
 
   switch (type) {
+    case SET_CARTS:
+      return payload.carts;
+
     case ADD_TO_CART:
       return [...state, payload.product];
 
