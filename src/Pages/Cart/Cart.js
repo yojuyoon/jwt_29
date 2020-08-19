@@ -23,13 +23,8 @@ const Cart = () => {
       .then((res) => {
         dispatch(cartsActions.setCarts(res.data));
       });
-
-    // return () => {
-    //   handleLeaveCart();
-    // };
   }, []);
 
-  //총 주문 금액 계산
   const handleSumToalPrice = () => {
     return carts
       .reduce((totalPrice, product) => {
@@ -46,7 +41,6 @@ const Cart = () => {
       .toLocaleString();
   };
 
-  //전체 선택 버튼을 따로 관리. 원래 담긴 아이템인 cartItem 배열의 전체 길이와 selectedItem 길이가 같고 다를 때 조건으로
   const handleMasterSelectBtn = () => {
     setItemSelected(
       itemSelected.length === carts.length ? [] : carts.map((item) => item.id),
@@ -65,10 +59,8 @@ const Cart = () => {
     setCheckMasterState(
       carts.length && itemSelected.length === carts.length,
     );
-  }, [itemSelected]);
+  }, [itemSelected, carts]);
 
-  //DB로 보낼 데이터를 만드는 함수
-  //형태 예시: [{product_list: [{id: 1004, quantity: 2}, {id: 404, quantity: 4}]}, {total: “225,700”}]
   const handleCheckOut = () => {
     const product_list = carts.reduce((product_list, product) => {
       const { id, quantity } = product;
@@ -86,6 +78,13 @@ const Cart = () => {
     const newData = [{ product_list }, { total: handleSumToalPrice() }];
     localStorage.setItem("cart_count", carts.length);
     return newData;
+  };
+
+  const handleRemoveSelectedProducts = () => {
+    dispatch(
+      cartsActions.removeSelectedProductsFromCart(itemSelected),
+    );
+    setItemSelected([]);
   };
 
   // const handleLeaveCart = () => {
@@ -162,10 +161,7 @@ const Cart = () => {
           <div className="cartControl">
             <button
               type="button"
-              onClick={() =>
-                dispatch(
-                  cartsActions.removeSelectedProductsFromCart(itemSelected),
-                )}
+              onClick={handleRemoveSelectedProducts}
             >
               선택상품 삭제
             </button>
