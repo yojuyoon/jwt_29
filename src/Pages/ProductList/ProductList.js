@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 import LeftNav from "./LeftNav/LeftNav";
 import ProductItem from "./ProductItem/ProductItem";
 import CategoryList from "./CategoryList/CategoryList";
@@ -6,38 +8,31 @@ import FilterNav from "./FilterNav/FilterNav";
 import { API_URL } from "../../config";
 import "./ProductList.scss";
 
-class ProductList extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      originItemData: [],
-      itemData: [],
-      detailList: [],
-    };
-  }
+import "./ProductList.scss";
 
-  componentDidMount() {
-    fetch(
-      `${API_URL}/data/product.json`,
-      localStorage.getItem("token") && {
-        headers: {
-          Authorization: localStorage.getItem("token"),
-        },
-      }
-    )
-      .then((res) => res.json())
-      .then((res) =>
-        this.setState({ itemData: res.data, originItemData: res.data }, () => {
-          this.handleCreateCategories();
-        })
-      );
-  }
+function ProductList(props) {
+  const [originItems, setOriginItems] = useState([]);
+  const [items, setItems] = useState([]);
+  const [detailList, setDetailList] = useState([]);
+  const [productFilter, setProductFilter] = useState("추천순");
+  const [productInfoFilter, setProductInfoFilter] = useState([]);
 
-  componentDidUpdate(prevProps, prevState) {
-    const { category, subcategory } = this.props.match.params;
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/data/product.json", {
+        headers: { Authorization: localStorage.getItem("token") },
+      })
+      .then((res) => {
+        setItems(res.data.data);
+        setOriginItems(res.data.data);
+        setDetailList([...new Set(res.data.data.map((data) => data.detail))]);
+      });
+  }, []);
 
-    if (prevProps.match.params !== this.props.match.params) {
-      fetch(
+  useEffect(() => {
+    const { category, subcategory } = props.match.params;
+    axios
+      .get(
         `${API_URL}/product?category=${category}&subcategory=${subcategory}`,
         localStorage.getItem("token") && {
           headers: {
@@ -45,160 +40,80 @@ class ProductList extends React.Component {
           },
         }
       )
-        .then((res) => res.json())
-        .then((res) =>
-          this.setState(
-            { itemData: res.data, originItemData: res.data },
-            () => {
-              this.handleCreateCategories();
-            }
-          )
-        );
-    }
-  }
+      .then((res) => {
+        setOriginItems(res.data);
+        setItems(res.data);
+        setDetailList([...new Set(res.data.data.map((data) => data.detail))]);
+      });
+  }, [props.match.params]);
 
-  handleCreateCategories = () => {
-    const { itemData } = this.state;
-    let detail_list = new Set();
-
-    for (let i = 0; i < itemData.length; i++) {
-      detail_list.add(itemData[i].detail);
-    }
-
-    this.setState({ detailList: [...detail_list] });
+  const handleFilterReset = () => {
+    setItems(originItems);
+    setProductInfoFilter([]);
   };
 
-  handleFilterDiscount = () => {
-    const { itemData } = this.state;
+  const handleProductInfoFilter = (e) => {
+    const { innerText } = e.target;
+    setProductInfoFilter(
+      productInfoFilter.find((product) => product === innerText)
+        ? productInfoFilter.filter((product) => product !== innerText)
+        : [...productInfoFilter, innerText]
+    );
+  };
 
-    const filtered = itemData.filter((item) => {
-      return item.discount_rate !== 0;
+  useEffect(() => {
+    setItems(
+      productInfoFilter.find((filter) => filter.includes("할인상품만"))
+        ? items.filter((item) => item.discount_rate !== 0)
+        : originItems
+    );
+  }, [productInfoFilter]);
+
+  const handleSort = (e) => {
+    const { innerText } = e.target;
+    setProductFilter(innerText);
+    const sortedProducts = [...items].sort((a, b) => {
+      if (innerText === "낮은가격순") return a.price - b.price;
+      if (innerText === "높은가격순") return b.price - a.price;
+      if (innerText === "높은할인순") return b.discount_rate - a.discount_rate;
+      return 0;
     });
-    this.setState({ itemData: filtered });
+
+    setItems(innerText === "추천순" ? originItems : sortedProducts);
   };
 
-  handleFilterFreeShipping = () => {
-    const { itemData } = this.state;
-
-    const filtered = itemData.filter((item) => {
-      return item.discount_rate === 0;
-    });
-    this.setState({ itemData: filtered });
-  };
-
-  handleFilterRate = () => {
-    const { itemData } = this.state;
-
-    const filtered = itemData.filter((item) => {
-      return (
-        parseInt(item[item.discount_rate ? "discount_price" : "price"]) < 50000
-      );
-    });
-    this.setState({ itemData: filtered });
-  };
-
-  handleFilterReset = () => {
-    const { originItemData: itemData } = this.state;
-    this.setState({ itemData });
-  };
-
-  /*********상단 드롭다운 메뉴*********/
-
-  handleSort = (direction) => {
-    console.log(direction);
-    const { itemData } = this.state;
-    let tempData = [...itemData];
-
-    for (let i = tempData.length - 1; i >= 0; i--) {
-      for (let j = 0; j < i; j++) {
-        let j_price = 0;
-        let j2_price = 0;
-        if (tempData[j].discount_rate) j_price = tempData[j].discount_price;
-        else j_price = tempData[j].price;
-        if (tempData[j + 1].discount_rate)
-          j2_price = tempData[j + 1].discount_price;
-        const isAscending =
-          direction == "A"
-            ? parseInt(j_price) < parseInt(j2_price)
-            : parseInt(j_price) > parseInt(j2_price);
-        if (tempData[j].discount_rate) j_price = tempData[j].discount_price;
-        else j_price = tempData[j].price;
-        if (tempData[j + 1].discount_rate)
-          j2_price = tempData[j + 1].discount_price;
-        else j2_price = tempData[j + 1].price;
-        if (isAscending) {
-          let temp = tempData[j];
-          tempData[j] = tempData[j + 1];
-          tempData[j + 1] = temp;
-        }
-      }
-    }
-    this.setState({ itemData: tempData });
-  };
-
-  handleSortCreatedAt = () => {
-    const { itemData } = this.state;
-    let tempData = [...itemData];
-
-    for (let i = tempData.length - 1; i >= 0; i--) {
-      for (let j = 0; j < i; j++) {
-        let time1 = parseInt(
-          tempData[j].created_at.split(":")[2].replace(".", "").replace("Z", "")
-        );
-        let time2 = parseInt(
-          tempData[j + 1].created_at
-            .split(":")[2]
-            .replace(".", "")
-            .replace("Z", "")
-        );
-
-        if (time1 < time2) {
-          let temp = tempData[j];
-          tempData[j] = tempData[j + 1];
-          tempData[j + 1] = temp;
-        }
-      }
-    }
-    this.setState({ itemData: tempData });
-  };
-
-  render() {
-    const { itemData, detailList } = this.state;
-
-    return (
-      <div className="ProductList">
-        <div className="categoryWrap">
-          <div className="left">
-            <LeftNav gender={this.props.match.params.category} />
-            <FilterNav
-              handleFilterDiscount={this.handleFilterDiscount}
-              handleFilterRate={this.handleFilterRate}
-              handleFilterReset={this.handleFilterReset}
-              handleFilterFreeShipping={this.handleFilterFreeShipping}
-            />
-          </div>
-          <div className="right">
-            <CategoryList
-              handleSort={this.handleSort}
-              handleSortCreatedAt={this.handleSortCreatedAt}
-              detailList={detailList}
-            />
-            <ul className="productSection">
-              {itemData.map((item) => {
-                return (
-                  <ProductItem
-                    data={item}
-                    key={item.id}
-                    likeNum={item.like_num}
-                  />
-                );
-              })}
-            </ul>
-          </div>
+  return (
+    <div className="ProductList">
+      <div className="categoryWrap">
+        <div className="left">
+          <LeftNav gender={props.match.params.category} />
+          <FilterNav
+            handleFilterReset={handleFilterReset}
+            handleProductInfoFilter={handleProductInfoFilter}
+            productInfoFilter={productInfoFilter}
+          />
+        </div>
+        <div className="right">
+          <CategoryList
+            handleSort={handleSort}
+            detailList={detailList}
+            productFilter={productFilter}
+          />
+          <ul className="productSection">
+            {items.map((item) => {
+              return (
+                <ProductItem
+                  data={item}
+                  key={item.id}
+                  likeNum={item.like_num}
+                />
+              );
+            })}
+          </ul>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default ProductList;
