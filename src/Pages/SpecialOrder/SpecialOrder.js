@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import SpecialContent from "../../Components/SpecialContent/SpecialContent";
-import API_URL from "../../config";
+import { API_URL } from "../../config";
 import "./SpecialOrder.scss";
 
 class SpecialOrder extends React.Component {

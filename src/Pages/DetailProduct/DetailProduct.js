@@ -15,7 +15,7 @@ class DetailProduct extends React.Component {
     return (
       <>
         <div className="DetailProduct" />
-        <DetailItem key={data.product_id} content={data} />
+        <DetailItem key={data.product_id} data={data} />
       </>
     );
   }

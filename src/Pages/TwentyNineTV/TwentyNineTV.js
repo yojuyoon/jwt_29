@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import TwentyNineTVFeedComponent from "./TwentyNineTVFeedComponent";
 import FeedModal from "./FeedModal";
-import API_URL from "../../config";
+import { API_URL } from "../../config";
 import "./TwentyNineTV.scss";
 import "../../Styles/common.scss";
 

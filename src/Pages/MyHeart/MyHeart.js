@@ -3,7 +3,7 @@ import FavListProduct from "./FavListProduct";
 import FavListPost from "./FavListPost";
 import FavListBrand from "./FavListBrand";
 import TwentyNineTV from "../TwentyNineTV/TwentyNineTV";
-import API_URL from "../../config";
+import { API_URL } from "../../config";
 import "./MyHeart.scss";
 
 class MyHeart extends React.Component {
