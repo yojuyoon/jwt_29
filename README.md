@@ -1,10 +1,13 @@
 # 29CM 클론 프로젝트 리팩토링
 
-- 국내외 패션, 라이프 스타일을 한눈에 볼 수 있는 유명 온라인 편집샵 29CM Web 클론
+## Refactoring 목적
+
+- React Hooks
+- React Redux
 
 ### 개발 인원 및 기간
 
-- 개발 기간: 2020/08/18 ~ 2020/08/23
+- 개발 기간: 2020/08/18 ~ 2020/08/19
 - 개발 인원: 프론트엔드 4명
 
 ## 팀원
@@ -25,3 +28,13 @@
 - Git
 - Slack
 - Draw.io
+
+### Refactored Files
+
+- /src/Pages/Cart/Cart.js
+- /src/Pages/Cart/CartItem.js
+- /src/Pages/ProductList/ProductList.js
+- /src/Pages/ProductList/LeftNav/LeftNav.js
+- /src/Pages/ProductList/ProductItem/ProductItem.js
+- /src/Pages/DetailItem/DetailItem.js
+- /src/store/

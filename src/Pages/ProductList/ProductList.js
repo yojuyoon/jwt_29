@@ -11,11 +11,11 @@ import "./ProductList.scss";
 import "./ProductList.scss";
 
 function ProductList(props) {
-  const [originItems, setOriginItems] = useState([]);
-  const [items, setItems] = useState([]);
+  const [originItems, setOriginItems] = useState([]); // originalProducts
+  const [items, setItems] = useState([]); // products
   const [detailList, setDetailList] = useState([]);
-  const [productFilter, setProductFilter] = useState("추천순");
-  const [productInfoFilter, setProductInfoFilter] = useState([]);
+  const [productFilter, setProductFilter] = useState("추천순"); // productsFilterType
+  const [productInfoFilter, setProductInfoFilter] = useState([]); // productsInfoFilterTypes
 
   useEffect(() => {
     axios
@@ -55,7 +55,7 @@ function ProductList(props) {
   const handleProductInfoFilter = (e) => {
     const { innerText } = e.target;
     setProductInfoFilter(
-      productInfoFilter.find((product) => product === innerText)
+      productInfoFilter.includes(innerText)
         ? productInfoFilter.filter((product) => product !== innerText)
         : [...productInfoFilter, innerText]
     );
@@ -63,8 +63,8 @@ function ProductList(props) {
 
   useEffect(() => {
     setItems(
-      productInfoFilter.find((filter) => filter.includes("할인상품만"))
-        ? items.filter((item) => item.discount_rate !== 0)
+      productInfoFilter.includes("할인상품만")
+        ? items.filter((item) => !item.discount_rate)
         : originItems
     );
   }, [productInfoFilter]);
